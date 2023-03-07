@@ -129,7 +129,7 @@ Back in the:
 
 This is the page where we can add rules to help protect our branches.  The ones that we are going to implement is `Require a pull request before merging` clicking this will open another menu. `Require approvals` should already be checked.  We can increase the number of approvals if we want but one should be enough for our pourposes.  
 
-Towards the end of the page select another radio button labeled `Lock branch`.  
+Towards the end of the page select the radio buttons labeled `Lock branch` and `Do not allow bypassing the above settings`.  
 
 Do this for both the `main` and `dev` branch. 
 
@@ -143,7 +143,9 @@ Do this for both the `main` and `dev` branch.
 
 Essentially the `Require approvals` puts a restriction within gitHub that requires someone from your team to review code before it is merged with any protected branch. 
 
-The lock doesn't allow any one to push changes to any protected branch from their local machine.  *i.e. `git push origin main` no longer works* 
+The `lock` doesn't allow any one to push changes to any protected branch from their local machine.  *i.e. `git push origin main` no longer works* 
+
+The `Do not allow bypassing` make the rules we just put in place to apply to everyone collaborating on the repo.
 
 If we try to push to `main` or `dev` we will get the following error:
 
