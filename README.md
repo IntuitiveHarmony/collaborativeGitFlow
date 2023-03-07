@@ -70,7 +70,9 @@ This will send and invite to each of the group member's email addresses.  As a c
 
 At this point only the person setting up should clone the repo in order to set up the dev branch.  
 
-In the terminal:
+In the terminal clone down the repo to your local machine:
+
+*note: the address below is for the `collaborativeGitFLow` repo.  Your group's address will be different*
 
 ```
 git clone git@github.com:IntuitiveHarmony/collaborativeGitFlow.git
@@ -114,9 +116,26 @@ This will push the `dev` branch to gitHub.  Navigate to gitHub, REFRESH the page
 
 ### ADD BRANCH PROTECTIONS
 
-This step is not necessary, but it is highly reccomendded inorder to protect all your group's hard work.  
+This step is not necessary, but it is highly reccomendded inorder to protect all your group's hard work.  This is a way to add another layer of protection for your valuable main branch. Essentially we are going to make it so any one of the collaborators cannot just edit the code on the main (or any other protected) branch 
 
+Back in the: 
+1. Settings page 
+2. Navigate to the `branches` sub menu under `Code and automation`
+3. Click the `Add branch protection rule` button
 
+![Add Protection Rules](./images/protectionFlow.png)
+
+<br>
+
+This is the page where we can add rules to help protect our branches.  The one that we are going to implement is `Require a pull request before merging` clicking this will open another menu. `Require approvals` should already be checked.  We can increase the number of approvals if we want but one should be enough for our pourposes.  Do this for both the `main` and `dev` branch.
+
+![Rules Dropdown](./images/branchProtection.png)
+
+<br>
+
+Essentially we are putting a restriction within gitHub that requires someone from your team to review code before it is merged with any protected branch. When this is done we should have something that looks like this:
+
+![Protection Rules Home](./images/protectionRulesHome.png)
 
 
 
