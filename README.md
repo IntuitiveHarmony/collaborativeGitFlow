@@ -147,7 +147,7 @@ The lock doesn't allow any one to push changes to any protected branch from thei
 
 If we try to push to `main` or `dev` we will get the following error:
 
-
+![Lock Error](./images/lockError.png)
 
 When this is complete we should have something that looks like this:
 
