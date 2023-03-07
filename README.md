@@ -127,13 +127,25 @@ Back in the:
 
 <br>
 
-This is the page where we can add rules to help protect our branches.  The one that we are going to implement is `Require a pull request before merging` clicking this will open another menu. `Require approvals` should already be checked.  We can increase the number of approvals if we want but one should be enough for our pourposes.  Do this for both the `main` and `dev` branch.
+This is the page where we can add rules to help protect our branches.  The ones that we are going to implement is `Require a pull request before merging` clicking this will open another menu. `Require approvals` should already be checked.  We can increase the number of approvals if we want but one should be enough for our pourposes.  
+
+Towards the end of the page select another radio button labeled `Lock branch`.  
+
+Do this for both the `main` and `dev` branch. 
 
 ![Rules Dropdown](./images/branchProtection.png)
 
+...
+
+![Rules Dropdown](./images/lockBranch.png)
+
 <br>
 
-Essentially we are putting a restriction within gitHub that requires someone from your team to review code before it is merged with any protected branch. When this is done we should have something that looks like this:
+Essentially the `Require approvals` puts a restriction within gitHub that requires someone from your team to review code before it is merged with any protected branch. 
+
+The lock doesn't allow any one to push changes to any protected branch from their local machine.  *i.e. `git push origin main` no longer works*   
+
+When this is complete we should have something that looks like this:
 
 ![Protection Rules Home](./images/protectionRulesHome.png)
 
