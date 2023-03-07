@@ -143,7 +143,11 @@ Do this for both the `main` and `dev` branch.
 
 Essentially the `Require approvals` puts a restriction within gitHub that requires someone from your team to review code before it is merged with any protected branch. 
 
-The lock doesn't allow any one to push changes to any protected branch from their local machine.  *i.e. `git push origin main` no longer works*   
+The lock doesn't allow any one to push changes to any protected branch from their local machine.  *i.e. `git push origin main` no longer works* 
+
+If we try to push to `main` or `dev` we will get the following error:
+
+
 
 When this is complete we should have something that looks like this:
 
