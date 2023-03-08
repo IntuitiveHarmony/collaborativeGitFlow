@@ -236,6 +236,10 @@ Use this as a testing ground to run the code with the code from the two branches
 
 Once everyone is satisfied that all of the new features are working properly, create a pull request in gitHub from the `Pull requests` tab. 
 
+<br>
+
+## MERGE CONFLICTS 💀
+
 
 
 
