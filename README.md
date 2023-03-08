@@ -363,3 +363,8 @@ body {
 ```
 
 Whether you are in gitHub or your text editor you will decide which block of code to keep by deleting the code you don't want and the lines with `<<<<<<` `=======` and `>>>>>>`. You can also change the background color to something different entirely.  This is why having collaborators available for pull requests is beneficial. Once this is done click the `Mark as resolved` button to complete the merge to the `dev` branch.  moving forward it is best to delete (or not work out of) any branches that contributed to a merge conflict because it will keep coming back up!
+
+
+## HUNGRY FOR MORE
+
+The best way to learn these tools is to use them!  I reccomend finding a partner (or two) and work on setting up a mock repo using this markdown as a guide.  Work with simple code or README files and make branches, protect some of them, move commits to other branches, reset the HEAD, perform pull requests and merges even give yourself a merge conflict or two.  Better to practice now on a mock repo than on a big improtant project!
