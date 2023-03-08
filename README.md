@@ -292,7 +292,7 @@ body {
 Whether you are in gitHub or your text editor you will decide wich block of code to keep by deleting the code you don't want and the lines with `<<<<<<` `=======` and `>>>>>>`. You can also change the background color to something different entirely.  This is why having collaborators available for pull requests is beneficial. Once this is done click the `Mark as resolved` button to complete the merge to the `dev` branch.  moving forward it is best to delete (or not work out of) any branches that contributed to a merge conflict because it will keep coming back up!
 
 
-
+## MOVING A COMMIT TO ANOTHER BRANCH
 
 
 
