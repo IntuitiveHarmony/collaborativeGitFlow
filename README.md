@@ -287,7 +287,9 @@ Let me repeat, if you work in a group project you will experience a merge confli
 
 *In order to focus on merge conflicts themselves the following example won't involve any code.* 
 
-Let's say that we had
+Let's look at how gitHub responds when we try an merge a file that has been edited by two different collaborators.
+
+
 
 
 
