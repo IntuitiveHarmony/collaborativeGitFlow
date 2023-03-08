@@ -38,13 +38,7 @@ One person in the group should take care of this part
 
 Navigate to your gitHub account online.  In the top right hand corner there is a `+` button.  This will open a drop down menu, select new repository.
 
-<details>
-<summary>Screenshot</summary>
-<br>
-
 ![New Repo Init](./images/newRepo.png)
-
-</details>
 
 <br>
 
@@ -64,36 +58,18 @@ Click the green `Create repository` button
 2. Click on the first submenu under `Access` which is `Collaborators`.  
 3. Within this page there is an `Add people` button.  Use this to invite your group members
 
-<br>
-<details>
-<summary>Screenshot</summary>
-<br>
 
 ![Add Collaborators](./images/addCollabs.png)
-</details>
-<br>
 
 Find your team mates using their gitHub handles or email addresses.  Select each person and click the green button to send them an invite.
 
-<details>
-<summary>Screenshot</summary>
-<br>
-
 ![Invite Modal](./images/Invite.png)
-
-</details>
 
 <br>
 
 This will send and invite to each of the group member's email addresses as well as their gitHub account.  As a collaborator make sure you accept the invite or the owner of the repo will see something like this, until you do.
 
-<details>
-<summary>Screenshot</summary>
-<br>
-
 ![Invite Modal](./images/pendingInvite.png)
-
-</details>
 
 <br>
 
@@ -291,10 +267,29 @@ Let me repeat, if you work in a group project you will experience a merge confli
 
 Let's look at how gitHub responds when we try an merge a file that has been edited by two different collaborators.
 
-In this repo we have an `index.html` and `main.css` file.  Let's make a scenario where two people update the `main.css` and then try and merge them.
+In this repo we have an `index.html` and `main.css` file.  Let's make a scenario where two people update the `main.css` and then try and merge them. 
 
+One of our collaborators had a `greenBackground` branch and another had a `redBackground` branch, they both made changes to the original background color in the css file.    
 
+Whichever one pulls down to the `dev` branch shouldn't have any conflicts.  It is when we pull the other one in to the `dev` branch that the conflicts will become more apparent.  In this case I pulled the `redBackground` branch into `dev` first. and it merged just fine. Once we try and merge the `greenBackground` branch this error comes up:
 
+![Merge conflict](./images/greenToMain.png)
+
+Press the green `Create pull request`.  This will take you to a screen where you can resolve the merge conflict.  For more complicated merge conflicts gitHub may ask you to resolve them in your text editor.  Follow the prompts they provide in this case.
+
+Either way you are going to see something like the following code block.  It is showing you that the css in `greenBackground` is darkseagreen and that it is dark red in the `dev` branch, remember, we already merged the `redBackround` branch to `dev`
+
+```
+body {
+<<<<<<< greenBackground
+    background-color: darkseagreen;
+=======
+    background-color: darkred;
+>>>>>>> dev
+}
+```
+
+Whether you are in gitHub or your text editor you will decide wich block of code to keep by deleting the code you don't want and the lines with `<<<<<<` `=======` and `>>>>>>`. You can also change the background color to something different entirely.  This is why having collaborators available for pull requests is beneficial. Once this is done click the `Mark as resolved` button to complete the merge to the `dev` branch.  moving forward it is best to delete (or not work out of) any branches that contributed to a merge conflict because it will keep coming back up!
 
 
 
