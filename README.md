@@ -158,7 +158,25 @@ When this is complete we should have something that looks like this:
 <br>
 <hr>
 
+## COLLABORATORS CLONE REPO
+
+At this point the rest of the group memnbers can clone down a copy of the repo to their local machines. So that everyone can start on their pre-decided tasks.  Remember to work off a branch for each new feature. *note: branch names should be unique from eachother*
+
+```
+git checkout -b newFeature 
+```
+
+*note: the address below is for the `collaborativeGitFLow` repo.  Your group's address will be different*
+
+```
+git clone git@github.com:IntuitiveHarmony/collaborativeGitFlow.git
+```
+
 ## PULL REQUESTS
+
+Usually when someone pushes their code to gitHub there will (usually) be a message saying so and a button `Compare & pull request`  If this button is not there and you are sure that you pushed the code to gitHub.  You can create a new pull request in the `pull request` tab. Both options take you to the same screen.
+
+![Pull Request](./images/pullREquest.png)
 
 
 
