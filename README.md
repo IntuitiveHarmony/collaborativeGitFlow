@@ -16,6 +16,8 @@ A little planning goes a long way!  Before initializing a repo or writing any co
 
 - Agree upon a basic file structure.  As we code more and more projects we may find ourselves repeating a lot of the same tasks or setup.  This is another thing to lean into.  From the cullinary world there is an idea called *mise en place* which essentially means *putting everything in it's place*.  When we are consistant about how we set things up from project to project it will help us build muscle memory and allow us to focus on the project itself.  The opposite of this may bee seen as re-inventing the wheel each time  
 
+- Having a layout for the file structure beforehand will help us avoid merge conflicts down the road.
+
 - Determine who will initilize the repo.  While each person will eventually be a collaborator, one group member will set up the initial repo and then make others collaborators.  Each team member will clone the project to their local machine.
 
 <br>
@@ -30,7 +32,15 @@ One person in the group should take care of this part
 
 Navigate to your gitHub account online.  In the top right hand corner there is a `+` button.  This will open a drop down menu, select new repository.
 
+<details>
+<summary>Screenshot</summary>
+<br>
+
 ![New Repo Init](./images/newRepo.png)
+
+</details>
+
+<br>
 
 Fill out the form to create a new repo:
 - Name
@@ -49,20 +59,35 @@ Click the green `Create repository` button
 3. Within this page there is an `Add people` button.  Use this to invite your group members
 
 <br>
+<details>
+<summary>Screenshot</summary>
+<br>
 
 ![Add Collaborators](./images/addCollabs.png)
-
+</details>
 <br>
 
 Find your team mates using their gitHub handles or email addresses.  Select each person and click the green button to send them an invite.
 
+<details>
+<summary>Screenshot</summary>
+<br>
+
 ![Invite Modal](./images/Invite.png)
+
+</details>
 
 <br>
 
 This will send and invite to each of the group member's email addresses as well as their gitHub account.  As a collaborator make sure you accept the invite or the owner of the repo will see something like this, until you do.
 
+<details>
+<summary>Screenshot</summary>
+<br>
+
 ![Invite Modal](./images/pendingInvite.png)
+
+</details>
 
 <br>
 
@@ -102,6 +127,8 @@ The asterisk tells us which branch we are currently on.  If you have oh my zish 
 
 ![Terminal branches](./images/terminalBranch.png)
 
+<br>
+
 Once this branch has been made locally, push it to gitHub.  In the terminal run:
 
 ```
@@ -137,16 +164,17 @@ Do this for both the `main` and `dev` branch.
 
 ...
 
-![Rules Dropdown](./images/byPassBranch.png)
+![Rules Dropdown](./images/bypassBranch.png)
 
 <br>
 
-Essentially the `Require approvals` puts a restriction within gitHub that requires someone from your team to review code before it is merged with any protected branch. 
-*i.e. `git push origin main` no longer works* 
+Essentially the `Require approvals` puts a restriction within gitHub that requires someone from your team to review code before it is merged with any protected branch. (*i.e. `git push origin main` no longer works*)
 
 The `Do not allow bypassing` make the rules we just put in place to apply to everyone collaborating on the repo.
 
-If we try to push to `main` or `dev` we will get the following error:
+If anyone trys to push to `main` or `dev` they will get the following error:
+
+![Review Error](./images/reviewError.png)
 
 ![Review Error](./images/reviewError.png)
 
@@ -185,11 +213,17 @@ Usually when someone pushes their code to gitHub there will (usually) be a messa
 
 ![Pull Request](./images/pullREquest.png)
 
+<br>
+
 Once you press the `Compare and pull request` button it will take you to an other screen that needs a little attention. 
 
-1. Since `dev` is our staging branch before the `main` branch we need to switch the base to `dev`.  Use the drop down menu on the left. 
-2. You can request a review from someone in your group but it is not necessary.  At the beginning it is beneficial to complete pull requests together anyway.  That way the author can speak to the code if need be.
-3. Press the green button
+1. Since `dev` is our staging branch before the `main` branch we need to switch the base to `dev`.  Use the drop down menu on the left.  Make sure the compare branch is set to the `newFeature` branch
+2. You can request a review from someone in your group but it is not necessary.  At the beginning it is beneficial to complete pull requests together anyway.  That way the author can speak to the code if need be
+3. Press the green `Create pull request` button
+
+![Compare Changes](./images/compareChanges.png)
+
+<br>
 
 Once this is done it will take us to a screen that shows us what is going on th the pull request.  People can check any changes, make comments on the code and provide a review.  You can see that the red warning labels are requireing a code review before merging.  This was because we set the branch protections earlier.
 
@@ -201,7 +235,65 @@ Once this is done it will take us to a screen that shows us what is going on th 
 
 Since we set up our branch protections we will have to wait for one of our team members to review and approve our code before it can be merged.  Again, we se this up in order to protect or code with some check and balances.  It would be good practice to send a messaage to your team saying that you pushed your new feature.
 
-In order to complete the code review click the `Files changed` tab.  This window will show all of the changes that took place within the last commit of that branch. Click on the review changes button 
+![Review Required](./images/reviewRequired.png)
+
+<br>
+
+In order to complete the code review click the `Files changed` tab.  This window will show all of the changes that took place within the last commit of that branch. Click on the review changes button.  You can approve or request changes.  If you approve you will be able to merge the code in the next step.  If you request changes the other user will have to update the code and push those changes before aproval by your peers. 
+
+![Files changed](./images/filesChanged.png)
+
+![Fire Review](./images/fireReview.png)
+
+<br>
+
+You can also use the blue `+` sign to higlight certian blocks of code to comment on and start a review. You will still have to finish the review using the method described above.
+
+![Review Method 2](./images/anotherREviewMethod.png)
+
+<br>
+
+Then submit the review.  If it is has been approved then you move on to the green `Merge pull request` button.  The last step is to confirm the merge by pressing the `Confirm merge` button on the next page (I always forget this). Once you complete all this, the `newFeature` branch is now merged with the `dev` branch.   
+
+Just make sure you see the purple at the end to ensure you have completed the process.
+
+![Pull Success](./images/pullSuccess.png)
+
+<br>
+
+### GIT PULL ORIGIN DEV
+
+Collaborators can now go to the `dev` branch and test out the new feature.  Save and commit any changes you have on a branch you may be working on and checkout the `dev` branch.
+*Make sure you are on the `dev` branch before pulling!*
+
+```
+git checkout dev
+
+git pull origin dev
+```
+
+
+Use this as a testing ground to run the code with the code from the two branches merged, make sure the code all works together and all your previous functionality is maintained.  If other collaborators have branches to merge it is best to do individual pull requests to the `dev` branch and test them one at a time so bug hunts are minimal. 
+
+Once everyone is satisfied that all of the new features are working properly, create a new pull request in gitHub from the `Pull requests` tab. This time set the base be the `main` branch and set the compare to `dev`. Follow the above steps to complete a pull request.  Once this is done collaborators are able to work on their next tasks.  
+
+<br>
+
+## MERGE CONFLICTS 💀
+
+Duirng the course of any project communication is essential.  If multiple people in a group try and make edits to the same file and then merge those changes it will trigger a merge conflict. This WILL happen.  This is why we have the `dev` branch, to hash out merge conflicts and bugs while our main branch is still protected. 
+
+Let me repeat, if you work in a group project you will experience a merge conflict at some point.  They can range from a simple fix to nightmare catatrophe.  Don't let this worry you though.  It is important to know how to deal with them.  We can provide a simple example.
+
+*In order to focus on merge conflicts themselves the following example won't involve any code.* 
+
+Let's look at how gitHub responds when we try an merge a file that has been edited by two different collaborators.
+
+
+
+
+
+
 
 
 
