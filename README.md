@@ -189,10 +189,20 @@ Usually when someone pushes their code to gitHub there will (usually) be a messa
 Once you press the `Compare and pull request` button it will take you to an other screen that needs a little attention. 
 
 1. Since `dev` is our staging branch before the `main` branch we need to switch the base to `dev`.  Use the drop down menu on the left. 
-2. You can request a review from someone in your group but it is not necessary.  Besides at the beginning it is beneficial to complete pull requests together.  That way the author can speak to the code if need be.
+2. You can request a review from someone in your group but it is not necessary.  At the beginning it is beneficial to complete pull requests together anyway.  That way the author can speak to the code if need be.
 3. Press the green button
 
+Once this is done it will take us to a screen that shows us what is going on th the pull request.  People can check any changes, make comments on the code and provide a review.  You can see that the red warning labels are requireing a code review before merging.  This was because we set the branch protections earlier.
 
+![Pull request Screen](./images/pullRequest.png)
+
+<br> 
+
+### CODE REVIEW AND APPROVAL
+
+Since we set up our branch protections we will have to wait for one of our team members to review and approve our code before it can be merged.  Again, we se this up in order to protect or code with some check and balances.  It would be good practice to send a messaage to your team saying that you pushed your new feature.
+
+In order to complete the code review click the `Files changed` tab.  This window will show all of the changes that took place within the last commit of that branch. Click on the review changes button 
 
 
 
