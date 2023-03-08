@@ -160,17 +160,23 @@ When this is complete we should have something that looks like this:
 
 ## COLLABORATORS CLONE REPO
 
-At this point the rest of the group memnbers can clone down a copy of the repo to their local machines. So that everyone can start on their pre-decided tasks.  Remember to work off a branch for each new feature. *note: branch names should be unique from eachother*
-
-```
-git checkout -b newFeature 
-```
+At this point the rest of the group members can clone down a copy of the repo to their local machines. So that everyone can start on their pre-decided tasks. 
 
 *note: the address below is for the `collaborativeGitFLow` repo.  Your group's address will be different*
 
 ```
 git clone git@github.com:IntuitiveHarmony/collaborativeGitFlow.git
 ```
+
+Remember to work off a branch for each new feature. *note: branch names should be unique from eachother*
+
+While in the main branch in the terminal run:
+
+```
+git checkout -b newFeature 
+```
+
+Commit as you normally would while working within your new branch.  Once you are satisfied that the work is complete and your feature is working it is time to do a `pull request`
 
 ## PULL REQUESTS
 
