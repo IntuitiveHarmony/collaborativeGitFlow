@@ -154,7 +154,7 @@ Essentially the `Require approvals` puts a restriction within gitHub that requir
 
 The `Do not allow bypassing` make the rules we just put in place to apply to everyone collaborating on the repo.
 
-If anyone trys to push to `main` or `dev` they will get the following error:
+If anyone trys to push to `main` or `dev` they will get the following error: (more on this later)
 
 ![Review Error](./images/reviewError.png)
 
@@ -185,6 +185,74 @@ git checkout -b newFeature
 ```
 
 Commit as you normally would while working within your new branch.  Once you are satisfied that the work is complete and your feature is working push your work up to gitHub on your `newFeature` branch.  After that it is time to do a `pull request`.
+
+<br>
+
+## MOVING A COMMIT TO ANOTHER BRANCH
+
+Remember this error?
+
+![Review Error](./images/reviewError.png)
+
+<br>
+
+Lets say we accidentially commited work localy on a protected branch.  We won't be able to push it, what now?  If you have started working on a protected branch still add and commit.  moving the commit is fairly simple.  
+
+First we need to make the branch we want to move or commit to.  Once all your work is commited in the terminal run:
+
+```
+git checkout -b <newBrachToMoveMyWork>
+```
+
+This will create a new branch with your commit in there.  Go ahead and push this to gitHub if you want or simply continue to work from here. 
+
+We still need to reset the `HEAD` or top commit in the protected branch.  If we checkout `main` and run `git status` We can see that it is ahead by one commit, this is the commit we just moved to our new branch.  
+
+![Branch Ahead](./images/branchAhead.png)
+
+<br>
+
+To find the list off previous commits in the terminal run:
+
+```
+git log
+```
+
+You should see a list something like this print in your terminal. 
+
+```
+commit 4b75f52916bfa40747d5bb34e15d986c1ba97776
+Author: Intuitive Harmony <j.horst77@gmail.com>
+Date:   Wed Mar 8 08:50:06 2023 -0700
+
+    commit to move
+
+commit a456b041a3ed4d95f485877e7d76a04b4b031bb9
+Merge: 006d01f 4b75f52
+Author: IntuitiveHarmony <j.horst77@gmail.com>
+Date:   Wed Mar 8 08:47:45 2023 -0700
+
+    Merge pull request #23 from IntuitiveHarmony/image
+    
+    aqua back
+
+```
+
+Find the commit before the one you made and copy the long string of numbers and letters, since it is on a protected branch the commit will more than likely be a merge.
+
+In the terminal run:
+
+```
+git reset --hard <commit-before-the-commit-you-moved>
+```
+
+This is what it looked like in my case.  
+
+![Head Reset](./images/headReset.png)
+
+<br>
+
+That's it.  You should be back on track.  Just make sure to checkout the feature branch you are working on!
 
 <br>
 
@@ -275,6 +343,8 @@ Whichever one pulls down to the `dev` branch shouldn't have any conflicts.  It i
 
 ![Merge conflict](./images/greenToMain.png)
 
+<br>
+
 Press the green `Create pull request`.  This will take you to a screen where you can resolve the merge conflict.  For more complicated merge conflicts gitHub may ask you to resolve them in your text editor.  Follow the prompts they provide in this case.
 
 Either way you are going to see something like the following code block.  It is showing you that the css in `greenBackground` is darkseagreen and that it is dark red in the `dev` branch, remember, we already merged the `redBackround` branch to `dev`
@@ -290,17 +360,3 @@ body {
 ```
 
 Whether you are in gitHub or your text editor you will decide wich block of code to keep by deleting the code you don't want and the lines with `<<<<<<` `=======` and `>>>>>>`. You can also change the background color to something different entirely.  This is why having collaborators available for pull requests is beneficial. Once this is done click the `Mark as resolved` button to complete the merge to the `dev` branch.  moving forward it is best to delete (or not work out of) any branches that contributed to a merge conflict because it will keep coming back up!
-
-
-## MOVING A COMMIT TO ANOTHER BRANCH
-
-Lets say we accidentially commited work localy on a protected branch.  we won't be able to push it, what now?
-
-
-
-
-
-
-
-
-
