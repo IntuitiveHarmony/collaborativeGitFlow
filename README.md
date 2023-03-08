@@ -226,7 +226,7 @@ Once you press the `Compare and pull request` button it will take you to an othe
 
 Once this is done it will take us to a screen that shows us what is going on th the pull request.  People can check any changes, make comments on the code and provide a review.  You can see that the red warning labels are requireing a code review before merging.  This was because we set the branch protections earlier.
 
-![Pull request Screen](./images/pullRequest.png)
+![Review Required](./images/reviewRequired.png)
 
 <br> 
 
@@ -234,9 +234,6 @@ Once this is done it will take us to a screen that shows us what is going on th 
 
 Since we set up our branch protections we will have to wait for one of our team members to review and approve our code before it can be merged.  Again, we se this up in order to protect or code with some check and balances.  It would be good practice to send a messaage to your team saying that you pushed your new feature.
 
-![Review Required](./images/reviewRequired.png)
-
-<br>
 
 In order to complete the code review click the `Files changed` tab.  This window will show all of the changes that took place within the last commit of that branch. Click on the review changes button.  You can approve or request changes.  If you approve you will be able to merge the code in the next step.  If you request changes the other user will have to update the code and push those changes before aproval by your peers. 
 
