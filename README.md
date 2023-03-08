@@ -210,6 +210,10 @@ In order to complete the code review click the `Files changed` tab.  This window
 
 ![Fire Review](./images/fireReview.png)
 
+You can also use the blue `+` sign to higlight certian blocks of code to comment on and start a review. You will still have to finish the review using the method described above.
+
+![Review Method 2](./images/anotherREviewMethod.png)
+
 Then submit the review.  If it is approved then you move on to the green `Merge pull request` button.  the last step is to confirm the merge by pressing the `Confirm merge` button on the next page (I always forget this). Once you complete all this, the `newFeature` branch is now merged with the `dev` branch.   
 
 Just make sure you see the purple at the end to ensure you have completed the process.
