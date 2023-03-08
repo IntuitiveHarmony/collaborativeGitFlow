@@ -145,7 +145,7 @@ Essentially the `Require approvals` puts a restriction within gitHub that requir
 
 The `Do not allow bypassing` make the rules we just put in place to apply to everyone collaborating on the repo.
 
-If onyone trys to push to `main` or `dev` they will get the following error:
+If anyone trys to push to `main` or `dev` they will get the following error:
 
 ![Review Error](./images/reviewError.png)
 
@@ -188,7 +188,7 @@ Once you press the `Compare and pull request` button it will take you to an othe
 
 1. Since `dev` is our staging branch before the `main` branch we need to switch the base to `dev`.  Use the drop down menu on the left. 
 2. You can request a review from someone in your group but it is not necessary.  At the beginning it is beneficial to complete pull requests together anyway.  That way the author can speak to the code if need be.
-3. Press the green button
+3. Press the green `Create pull request` button
 
 Once this is done it will take us to a screen that shows us what is going on th the pull request.  People can check any changes, make comments on the code and provide a review.  You can see that the red warning labels are requireing a code review before merging.  This was because we set the branch protections earlier.
 
@@ -200,7 +200,41 @@ Once this is done it will take us to a screen that shows us what is going on th 
 
 Since we set up our branch protections we will have to wait for one of our team members to review and approve our code before it can be merged.  Again, we se this up in order to protect or code with some check and balances.  It would be good practice to send a messaage to your team saying that you pushed your new feature.
 
-In order to complete the code review click the `Files changed` tab.  This window will show all of the changes that took place within the last commit of that branch. Click on the review changes button 
+![Review Required](./images/reviewRequired.png)
+
+<br>
+
+In order to complete the code review click the `Files changed` tab.  This window will show all of the changes that took place within the last commit of that branch. Click on the review changes button.  You can approve or request changes.  If you approve you will be able to merge the code in the next step.  If you request changes the other user will have to update the code and push those changes before aproval by your peers. 
+
+![Files changed](./images/filesChanged.png)
+
+![Fire Review](./images/fireReview.png)
+
+You can also use the blue `+` sign to higlight certian blocks of code to comment on and start a review. You will still have to finish the review using the method described above.
+
+![Review Method 2](./images/anotherREviewMethod.png)
+
+Then submit the review.  If it is approved then you move on to the green `Merge pull request` button.  the last step is to confirm the merge by pressing the `Confirm merge` button on the next page (I always forget this). Once you complete all this, the `newFeature` branch is now merged with the `dev` branch.   
+
+Just make sure you see the purple at the end to ensure you have completed the process.
+
+![Pull Success](./images/pullSuccess.png)
+
+### GIT PULL ORIGIN DEV
+
+Collaborators can now go to the `dev` branch and test out the new feature.  Save and commit any changes you have on a branch you may be working on and checkout the `dev` branch.
+*Make sure you are on the `dev` branch before pulling!*
+
+```
+git checkout dev
+
+git pull origin dev
+```
+
+
+Use this as a testing ground to run the code with the code from the two branches merged, make sure they work together and all your previous functionality is maintained.  If other collaborators have branches to merge it is best to do them to the `dev` branch and test them one at a time so bug hunts are minimal. 
+
+Once everyone is satisfied that all of the new features are working properly, create a pull request in gitHub from the `Pull requests` tab. 
 
 
 
