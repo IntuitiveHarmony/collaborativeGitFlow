@@ -4,7 +4,7 @@ There are many aspects of group work. This lesson will focus specifically  on us
 
 > <br>Git - Open source version-control system <br>GitHub - Platform for hosting and collaborating on Git repositories <br><br>*Definitions from [GitHub Cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet.pdf "GitHub Cheatsheet")*
 
-Git is the program that is used locally in your terminal for version control. In order to achevie this it uses `branches` and a process called `merging`.  GitHub mirrors a lot of the functionality of git, it also has the ability to branch and merge.  I think of git being a tool on my local machine used for version control and gitHub being like facebook for my code.  
+Git is the program that is used locally in your terminal for version control. In order to achieve this it uses `branches` and a process called `merging`.  GitHub mirrors a lot of the functionality of git, it also has the ability to branch and merge.  I think of git being a tool on my local machine used for version control and gitHub being like facebook for my code.  
 
 <br>
 
@@ -18,13 +18,13 @@ Here is the basic flow we will be establishing:
 
 A little planning goes a long way!  Before initializing a repo or writing any code it is beneficial to come together as a group and establish a few things:
 
-- Determine who likes to work on which aspects of the code.  Some of us are more front end oriented some are more back end.  One of the benefits of working in a group is leaning on eachothers' skills AND learning from eachother.  Each person in the group should have a high level understanding of what each member is doing with their code even though they may not be working on that specific part.
+- Determine who likes to work on which aspects of the code.  Some of us are more front end oriented some are more back end.  One of the benefits of working in a group is leaning on each others' skills AND learning from each other.  Each person in the group should have a high level understanding of what each member is doing with their code even though they may not be working on that specific part.
 
-- Agree upon a basic file structure.  As we code more and more projects we may find ourselves repeating a lot of the same tasks or setup.  This is another thing to lean into.  From the cullinary world there is an idea called *mise en place* which essentially means *putting everything in it's place*.  When we are consistant about how we set things up from project to project it will help us build muscle memory and allow us to focus on the project itself.  The opposite of this may bee seen as re-inventing the wheel each time  
+- Agree upon a basic file structure.  As we code more and more projects we may find ourselves repeating a lot of the same tasks or setup.  This is another thing to lean into.  From the culinary world there is an idea called *mise en place* which essentially means *putting everything in it's place*.  When we are consistent about how we set things up from project to project it will help us build muscle memory and allow us to focus on the project itself.  The opposite of this may bee seen as re-inventing the wheel each time  
 
 - Having a layout for the file structure beforehand will help us avoid merge conflicts down the road.
 
-- Determine who will initilize the repo.  While each person will eventually be a collaborator, one group member will set up the initial repo and then make others collaborators.  Each team member will clone the project to their local machine.
+- Determine who will initialize the repo.  While each person will eventually be a collaborator, one group member will set up the initial repo and then make others collaborators.  Each team member will clone the project to their local machine.
 
 <br>
 
@@ -44,7 +44,7 @@ Navigate to your gitHub account online.  In the top right hand corner there is a
 
 Fill out the form to create a new repo:
 - Name
-- Description of the repo (optional but reccomended)
+- Description of the repo (optional but recommended)
 - Add README (for sure!)
 - Add .gitignore based on your project template (if available)
 
@@ -99,7 +99,7 @@ git checkout -b dev
 
 The `checkout` command allows us to switch between branches.  The `-b dev` creates a new branch called `dev`, makes a copy of the branch you are on and  switches to `dev`.
 
-Inorder to see the all the branches in a repo run in the terminal:
+In order to see the all the branches in a repo run in the terminal:
 
 ```
 git branch
@@ -117,7 +117,7 @@ Once this branch has been made locally, push it to gitHub.  In the terminal run:
 git push origin dev
 ```
 
-This will push the `dev` branch to gitHub.  Navigate to gitHub, REFRESH the page and you shoud see the new branch in the dropdown menu on the left side of the page.
+This will push the `dev` branch to gitHub.  Navigate to gitHub, REFRESH the page and you should see the new branch in the dropdown menu on the left side of the page.
 
 ![Dropdown of Branches](./images/devBranch.png)
 
@@ -125,7 +125,7 @@ This will push the `dev` branch to gitHub.  Navigate to gitHub, REFRESH the page
 
 ### ADD BRANCH PROTECTIONS
 
-This step is not necessary, but it is highly reccomendded inorder to protect all your group's hard work.  This is a way to add another layer of protection for your valuable main branch. Essentially we are going to make it so any one of the collaborators cannot just edit the code on the main (or any other protected) branch 
+This step is not necessary, but it is highly recommended in order to protect all your group's hard work.  This is a way to add another layer of protection for your valuable main branch. Essentially we are going to make it so any one of the collaborators cannot just edit the code on the main (or any other protected) branch 
 
 Back in the: 
 1. Settings page 
@@ -136,7 +136,7 @@ Back in the:
 
 <br>
 
-This is the page where we can add rules to help protect our branches.  The ones that we are going to implement is `Require a pull request before merging` clicking this will open another menu. `Require approvals` should already be checked.  We can increase the number of approvals if we want but one should be enough for our pourposes.  
+This is the page where we can add rules to help protect our branches.  The ones that we are going to implement is `Require a pull request before merging` clicking this will open another menu. `Require approvals` should already be checked.  We can increase the number of approvals if we want but one should be enough for our purposes.  
 
 Towards the end of the page select the radio buttons labeled `Lock branch` and `Do not allow bypassing the above settings`.  
 
@@ -154,7 +154,7 @@ Essentially the `Require approvals` puts a restriction within gitHub that requir
 
 The `Do not allow bypassing` make the rules we just put in place to apply to everyone collaborating on the repo.
 
-If anyone trys to push to `main` or `dev` they will get the following error: (more on this later)
+If anyone try's to push to `main` or `dev` they will get the following error: (more on this later)
 
 ![Review Error](./images/reviewError.png)
 
@@ -196,12 +196,12 @@ Remember this error?
 
 <br>
 
-Lets say we accidentially commited work localy on a protected branch.  We won't be able to push it, what now?  If you have started working on a protected branch still add and commit.  moving the commit is fairly simple.  
+Lets say we accidentally committed work locally on a protected branch.  We won't be able to push it, what now?  If you have started working on a protected branch still add and commit.  moving the commit is fairly simple.  
 
-First we need to make the branch we want to move or commit to.  Once all your work is commited in the terminal run:
+First we need to make the branch we want to move or commit to.  Once all your work is committed in the terminal run:
 
 ```
-git checkout -b <newBrachToMoveMyWork>
+git checkout -b <new-brach-to-move-my-work>
 ```
 
 This will create a new branch with your commit in there.  Go ahead and push this to gitHub if you want or simply continue to work from here. 
@@ -252,8 +252,11 @@ This is what it looked like in my case.
 
 <br>
 
-That's it.  You should be back on track.  Just make sure to checkout the feature branch you are working on!
+You should see the following in the terminal and now be back on track.  Just make sure to checkout the feature branch you are working on!
 
+![Clean Branch](./images/branchClean.png)
+
+<br>
 <br>
 
 ## PULL REQUESTS
@@ -274,7 +277,7 @@ Once you press the `Compare and pull request` button it will take you to an othe
 
 <br>
 
-Once this is done it will take us to a screen that shows us what is going on th the pull request.  People can check any changes, make comments on the code and provide a review.  You can see that the red warning labels are requireing a code review before merging.  This was because we set the branch protections earlier.
+Once this is done it will take us to a screen that shows us what is going on the the pull request.  People can check any changes, make comments on the code and provide a review.  You can see that the red warning labels are requiring a code review before merging.  This was because we set the branch protections earlier.
 
 ![Review Required](./images/reviewRequired.png)
 
@@ -282,10 +285,10 @@ Once this is done it will take us to a screen that shows us what is going on th 
 
 ### CODE REVIEW AND APPROVAL
 
-Since we set up our branch protections we will have to wait for one of our team members to review and approve our code before it can be merged.  Again, we se this up in order to protect or code with some check and balances.  It would be good practice to send a messaage to your team saying that you pushed your new feature.
+Since we set up our branch protections we will have to wait for one of our team members to review and approve our code before it can be merged.  Again, we se this up in order to protect or code with some check and balances.  It would be good practice to send a message to your team saying that you pushed your new feature.
 
 
-In order to complete the code review click the `Files changed` tab.  This window will show all of the changes that took place within the last commit of that branch. Click on the review changes button.  You can approve or request changes.  If you approve you will be able to merge the code in the next step.  If you request changes the other user will have to update the code and push those changes before aproval by your peers. 
+In order to complete the code review click the `Files changed` tab.  This window will show all of the changes that took place within the last commit of that branch. Click on the review changes button.  You can approve or request changes.  If you approve you will be able to merge the code in the next step.  If you request changes the other user will have to update the code and push those changes before approval by your peers. 
 
 ![Files changed](./images/filesChanged.png)
 
@@ -293,7 +296,7 @@ In order to complete the code review click the `Files changed` tab.  This window
 
 <br>
 
-You can also use the blue `+` sign to higlight certian blocks of code to comment on and start a review. You will still have to finish the review using the method described above.
+You can also use the blue `+` sign to highlight certain blocks of code to comment on and start a review. You will still have to finish the review using the method described above.
 
 ![Review Method 2](./images/anotherREviewMethod.png)
 
@@ -329,7 +332,7 @@ Once everyone is satisfied that all of the new features are working properly, cr
 
 Duirng the course of any project communication is essential.  If multiple people in a group try and make edits to the same file and then merge those changes it will trigger a merge conflict. This WILL happen.  This is why we have the `dev` branch, to hash out merge conflicts and bugs while our main branch is still protected. 
 
-Let me repeat, if you work in a group project you will experience a merge conflict at some point.  They can range from a simple fix to nightmare catatrophe.  This is why it is important to know how to deal with them.  We can provide a simple example. 
+Let me repeat, if you work in a group project you will experience a merge conflict at some point.  They can range from a simple fix to nightmare catastrophe.  This is why it is important to know how to deal with them.  We can provide a simple example. 
 
 *In order to focus on merge conflicts themselves the following example won't involve any code.* 
 
@@ -359,4 +362,4 @@ body {
 }
 ```
 
-Whether you are in gitHub or your text editor you will decide wich block of code to keep by deleting the code you don't want and the lines with `<<<<<<` `=======` and `>>>>>>`. You can also change the background color to something different entirely.  This is why having collaborators available for pull requests is beneficial. Once this is done click the `Mark as resolved` button to complete the merge to the `dev` branch.  moving forward it is best to delete (or not work out of) any branches that contributed to a merge conflict because it will keep coming back up!
+Whether you are in gitHub or your text editor you will decide which block of code to keep by deleting the code you don't want and the lines with `<<<<<<` `=======` and `>>>>>>`. You can also change the background color to something different entirely.  This is why having collaborators available for pull requests is beneficial. Once this is done click the `Mark as resolved` button to complete the merge to the `dev` branch.  moving forward it is best to delete (or not work out of) any branches that contributed to a merge conflict because it will keep coming back up!
