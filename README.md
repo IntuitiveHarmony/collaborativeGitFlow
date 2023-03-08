@@ -60,7 +60,7 @@ Find your team mates using their gitHub handles or email addresses.  Select each
 
 <br>
 
-This will send and invite to each of the group member's email addresses.  As a collaborator make sure you accept the invite or the owner of the repo will see something like this, until you do.
+This will send and invite to each of the group member's email addresses as well as their gitHub account.  As a collaborator make sure you accept the invite or the owner of the repo will see something like this, until you do.
 
 ![Invite Modal](./images/pendingInvite.png)
 
@@ -176,13 +176,24 @@ While in the main branch in the terminal run:
 git checkout -b newFeature 
 ```
 
-Commit as you normally would while working within your new branch.  Once you are satisfied that the work is complete and your feature is working it is time to do a `pull request`
+Commit as you normally would while working within your new branch.  Once you are satisfied that the work is complete and your feature is working push your work up to gitHub on your `newFeature` branch.  After that it is time to do a `pull request`.
+
+<br>
 
 ## PULL REQUESTS
 
 Usually when someone pushes their code to gitHub there will (usually) be a message saying so and a button `Compare & pull request`  If this button is not there and you are sure that you pushed the code to gitHub.  You can create a new pull request in the `pull request` tab. Both options take you to the same screen.
 
 ![Pull Request](./images/pullREquest.png)
+
+Once you press the `Compare and pull request` button it will take you to an other screen that needs a little attention. 
+
+1. Since `dev` is our staging branch before the `main` branch we need to switch the base to `dev`.  Use the drop down menu on the left. 
+2. You can request a review from someone in your group but it is not necessary.  Besides at the beginning it is beneficial to complete pull requests together.  That way the author can speak to the code if need be.
+3. Press the green button
+
+
+
 
 
 
