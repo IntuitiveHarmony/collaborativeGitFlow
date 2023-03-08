@@ -176,7 +176,6 @@ If anyone trys to push to `main` or `dev` they will get the following error:
 
 ![Review Error](./images/reviewError.png)
 
-![Review Error](./images/reviewError.png)
 
 When this is complete we should have something that looks like this:
 
@@ -289,24 +288,6 @@ Let me repeat, if you work in a group project you will experience a merge confli
 
 Let's look at how gitHub responds when we try an merge a file that has been edited by two different collaborators.
 
-There is a file called `fileOfInterest.txt with 10 lines of code in it:
-
-```
-1 established working code from dev
-2 established working code from dev
-3 established working code from dev
-4 established working code from dev
-5 established working code from dev
-6 established working code from dev
-7 established working code from dev
-8 established working code from dev
-9 established working code from dev
-10 established working code from dev
-```
-
-In the `newFeature` branch we'll add 5 lines to the end and delete two of the lines from above.
-
-In the `readme` branch we'll also add 5 lines and delete two different lines. 
 
 
 
