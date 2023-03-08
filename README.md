@@ -294,7 +294,7 @@ Whether you are in gitHub or your text editor you will decide wich block of code
 
 ## MOVING A COMMIT TO ANOTHER BRANCH
 
-
+Lets say we accidentially commited work localy on a protected branch.  we won't be able to push it, what now?
 
 
 
