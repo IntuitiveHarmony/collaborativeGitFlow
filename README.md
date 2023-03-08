@@ -252,7 +252,7 @@ This is what it looked like in my case.
 
 <br>
 
-That's it.  You should be back on track.  Just make sure to checkout the feature branch you are working on!
+After running `git pull origin main` you should be back on track.  Just make sure to checkout the feature branch you are working on!
 
 <br>
 
