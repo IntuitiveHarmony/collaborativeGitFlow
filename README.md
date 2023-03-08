@@ -279,7 +279,7 @@ Once everyone is satisfied that all of the new features are working properly, cr
 
 Duirng the course of any project communication is essential.  If multiple people in a group try and make edits to the same file and then merge those changes it will trigger a merge conflict. This WILL happen.  This is why we have the `dev` branch, to hash out merge conflicts and bugs while our main branch is still protected. 
 
-Let me repeat, if you work in a group project you will experience a merge conflict at some point.  They can range from a simple fix to nightmare catatrophe.  Don't let this worry you though.  It is important to know how to deal with them.  We can provide a simple example.
+Let me repeat, if you work in a group project you will experience a merge conflict at some point.  They can range from a simple fix to nightmare catatrophe.  This is why it is important to know how to deal with them.  We can provide a simple example. 
 
 *In order to focus on merge conflicts themselves the following example won't involve any code.* 
 
