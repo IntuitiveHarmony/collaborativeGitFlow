@@ -8,6 +8,12 @@ Git is the program that is used locally in your terminal for version control. In
 
 <br>
 
+Here is the basic flow we will be establishing:
+
+![Git Flow Diagram](./images/gitFlow.png)
+
+<br>
+
 ## GET ORGANIZED
 
 A little planning goes a long way!  Before initializing a repo or writing any code it is beneficial to come together as a group and establish a few things:
@@ -284,6 +290,12 @@ Let me repeat, if you work in a group project you will experience a merge confli
 *In order to focus on merge conflicts themselves the following example won't involve any code.* 
 
 Let's look at how gitHub responds when we try an merge a file that has been edited by two different collaborators.
+
+In this repo we have an `index.html` and `main.css` file.  Let's make a scenario where two people update the `main.css` and then try and merge them.
+
+
+
+
 
 
 
